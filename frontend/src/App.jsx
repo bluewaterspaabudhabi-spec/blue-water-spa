@@ -25,7 +25,7 @@ import Services from "./pages/Services.jsx";
 import Staff from "./pages/Staff.jsx";
 import Settings from "./pages/Settings.jsx";
 import InvoiceDetail from "./pages/InvoiceDetail.jsx";
-import Login from "./pages/Login.jsx";
+import Login from "./pages/login.jsx";
 import FeedbackForm from "./pages/FeedbackForm.jsx";
 import RateKiosk from "./pages/RateKiosk.jsx";
 
