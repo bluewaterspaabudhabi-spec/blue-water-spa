@@ -1,0 +1,30 @@
+[
+  {
+    "id": 5,
+    "name": "khalid",
+    "email": "khalid552009@gmail.com",
+    "passwordHash": "$2b$10$eoymXs1jxU5yE8MyE2c7HeoAoc3ytPobm5z/l1zNVbaUxns3mBabm",
+    "role": "admin"
+  },
+  {
+    "id": 6,
+    "name": "liyan",
+    "email": "fgfggghgf@gvdjvhcvj3com",
+    "passwordHash": "$2b$10$Ew6ssOidBI31ZPpXLXmieenJh1hBzCoc3wnETwCTP0Nw09xa71wKi",
+    "role": "supervisor"
+  },
+  {
+    "id": 9,
+    "name": "helen",
+    "email": "khalid552009@yahoo.com",
+    "passwordHash": "$2b$10$61AG2x/QYCxy9ECrnPp0cO3pZ3TlPjj/uMgBnZWZ7CQFEUZx40s6y",
+    "role": "staff"
+  },
+  {
+    "id": 10,
+    "name": "may",
+    "email": "khalid552009@live.com",
+    "passwordHash": "$2b$10$IRJNqzT16Xh6tvjGPkgrKeBdqGSDwI8/zBzitewRvLLRqDKmHbsQS",
+    "role": "supervisor"
+  }
+]

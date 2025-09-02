@@ -1,0 +1,308 @@
+[
+  {
+    "mode": "in",
+    "roomNumber": "2",
+    "taxiCost": 0,
+    "customer": {
+      "name": "fdgfdg",
+      "phone": "234234"
+    },
+    "therapist": "dfgfsdg",
+    "items": [
+      {
+        "service": "fgdfggdg",
+        "qty": 1,
+        "price": 54,
+        "total": 54
+      },
+      {
+        "service": "dfgfdgdg",
+        "qty": 1,
+        "price": 56,
+        "total": 56
+      },
+      {
+        "service": "ghgfhhj",
+        "qty": 1,
+        "price": 5,
+        "total": 5
+      }
+    ],
+    "discount": 0,
+    "taxRate": 5,
+    "totals": {
+      "subTotal": 115,
+      "tax": 5.75,
+      "extra": 0,
+      "grandTotal": 120.75
+    },
+    "paymentMethod": "Cash",
+    "notes": "",
+    "createdAt": "2025-08-24T19:00:59.673Z",
+    "id": 1
+  },
+  {
+    "id": 2,
+    "number": 2,
+    "createdAt": "2025-08-26T13:06:12.676Z",
+    "mode": "out",
+    "roomNumber": "",
+    "area": "G",
+    "taxiCost": 0,
+    "currency": "AED",
+    "customerId": 1,
+    "customerName": "tom",
+    "therapist": "sar",
+    "paymentMethod": "Card",
+    "notes": "",
+    "items": [
+      {
+        "serviceId": 1,
+        "serviceName": "Massage",
+        "qty": 1,
+        "price": 50,
+        "total": 50
+      }
+    ],
+    "discount": 0,
+    "taxRate": 10,
+    "extra": 0,
+    "subtotal": 50,
+    "tax": 5,
+    "total": 55
+  },
+  {
+    "id": 3,
+    "number": 3,
+    "createdAt": "2025-08-26T13:31:41.937Z",
+    "mode": "in",
+    "roomNumber": "5",
+    "area": "",
+    "taxiCost": 0,
+    "currency": "AED",
+    "customerId": 8,
+    "customerName": "JAK",
+    "therapist": "mi",
+    "paymentMethod": "Cash",
+    "notes": "",
+    "items": [
+      {
+        "serviceId": 1,
+        "serviceName": "Massage",
+        "qty": 1,
+        "price": 50,
+        "total": 50
+      }
+    ],
+    "discount": 0,
+    "taxRate": 10,
+    "extra": 0,
+    "subtotal": 50,
+    "tax": 5,
+    "total": 55
+  },
+  {
+    "id": 4,
+    "number": 4,
+    "createdAt": "2025-08-26T15:08:12.842Z",
+    "mode": "in",
+    "roomNumber": "2",
+    "area": "",
+    "taxiCost": 0,
+    "currency": "AED",
+    "customerId": 8,
+    "customerName": "JAK",
+    "therapist": "sar",
+    "paymentMethod": "Cash",
+    "notes": "",
+    "items": [
+      {
+        "serviceId": 1,
+        "serviceName": "Massage",
+        "qty": 1,
+        "price": 50,
+        "total": 50
+      }
+    ],
+    "discount": 0,
+    "taxRate": 10,
+    "extra": 0,
+    "subtotal": 50,
+    "tax": 5,
+    "total": 55
+  },
+  {
+    "id": 5,
+    "number": 5,
+    "createdAt": "2025-08-26T17:13:13.863Z",
+    "mode": "in",
+    "roomNumber": "",
+    "area": "",
+    "taxiCost": 0,
+    "currency": "AED",
+    "customerId": 8,
+    "customerName": "JAK",
+    "therapist": "mi",
+    "paymentMethod": "Card",
+    "notes": "",
+    "items": [
+      {
+        "serviceId": 1,
+        "serviceName": "Massage",
+        "qty": 1,
+        "price": 50,
+        "total": 50
+      }
+    ],
+    "discount": 0,
+    "taxRate": 10,
+    "extra": 0,
+    "subtotal": 50,
+    "tax": 5,
+    "total": 55
+  },
+  {
+    "id": 6,
+    "number": 6,
+    "createdAt": "2025-08-28T09:07:39.919Z",
+    "mode": "in",
+    "roomNumber": "5",
+    "area": "",
+    "taxiCost": 0,
+    "currency": "AED",
+    "customerId": 6,
+    "customerName": "kkkkkkkkkkkkkk",
+    "therapist": "mi",
+    "paymentMethod": "Cash",
+    "notes": "",
+    "items": [
+      {
+        "serviceId": 2,
+        "serviceName": "boy",
+        "qty": 1,
+        "price": 400,
+        "total": 400
+      }
+    ],
+    "discount": 0,
+    "taxRate": 10,
+    "extra": 0,
+    "subtotal": 400,
+    "tax": 40,
+    "total": 440
+  },
+  {
+    "id": 7,
+    "number": 7,
+    "createdAt": "2025-08-28T18:28:42.681Z",
+    "mode": "in",
+    "roomNumber": "33",
+    "area": "",
+    "taxiCost": 0,
+    "currency": "AED",
+    "customerId": 43,
+    "customerName": "Ahmed Ali",
+    "therapist": "mi",
+    "paymentMethod": "Cash",
+    "notes": "",
+    "items": [
+      {
+        "serviceId": 2,
+        "serviceName": "boy",
+        "qty": 1,
+        "price": 400,
+        "total": 400
+      }
+    ],
+    "discount": 0,
+    "taxRate": 10,
+    "extra": 0,
+    "subtotal": 400,
+    "tax": 40,
+    "total": 440
+  },
+  {
+    "id": 8,
+    "createdAt": "2025-08-29T08:51:19.624Z",
+    "updatedAt": "2025-08-29T08:51:19.624Z",
+    "customerId": 43,
+    "customerName": "Ahmed Ali",
+    "mode": "in",
+    "paymentMethod": "",
+    "roomNumber": "23",
+    "area": "",
+    "therapistId": 2,
+    "therapist": "mi",
+    "items": [],
+    "discount": 0,
+    "taxRate": 0,
+    "subtotal": 0,
+    "tax": 0,
+    "total": 0,
+    "currency": "AED",
+    "notes": "",
+    "appointmentId": 23
+  },
+  {
+    "id": 9,
+    "createdAt": "2025-08-29T13:07:31.602Z",
+    "updatedAt": "2025-08-29T13:07:31.602Z",
+    "customerId": 43,
+    "customerName": "Ahmed Ali",
+    "mode": "in",
+    "paymentMethod": "",
+    "roomNumber": "23",
+    "area": "",
+    "therapistId": 3,
+    "therapist": "gani",
+    "items": [
+      {
+        "serviceId": 2,
+        "serviceName": "boy",
+        "qty": 1,
+        "price": 400,
+        "total": 400,
+        "therapistId": null
+      }
+    ],
+    "discount": 0,
+    "taxRate": 0,
+    "subtotal": 400,
+    "tax": 0,
+    "total": 400,
+    "currency": "AED",
+    "notes": "",
+    "appointmentId": null
+  },
+  {
+    "id": 10,
+    "createdAt": "2025-08-29T21:09:06.054Z",
+    "updatedAt": "2025-08-29T21:09:06.054Z",
+    "customerId": 53,
+    "customerName": "kh",
+    "mode": "in",
+    "paymentMethod": "",
+    "roomNumber": "25",
+    "area": "",
+    "therapistId": 2,
+    "therapist": "mia",
+    "items": [
+      {
+        "serviceId": 2,
+        "serviceName": "boy",
+        "qty": 1,
+        "price": 400,
+        "total": 400,
+        "therapistId": null
+      }
+    ],
+    "discount": 0,
+    "taxRate": 0,
+    "subtotal": 400,
+    "tax": 0,
+    "total": 400,
+    "currency": "AED",
+    "notes": "",
+    "appointmentId": 3
+  }
+]

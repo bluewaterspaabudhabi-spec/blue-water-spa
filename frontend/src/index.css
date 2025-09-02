@@ -1,0 +1,341 @@
+/* frontend/src/index.css */
+
+/* Reset some browser defaults */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  color: #222;
+  background-color: #fff;
+  line-height: 1.4;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+/* Layout helpers */
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Invoice page container */
+.invoice-page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 16px;
+  background: #fff;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  padding: 8px 6px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .page {
+    padding: 10px;
+  }
+  .invoice-page {
+    padding: 8px;
+  }
+}
+
+/* -------- PRINT STYLES -------- */
+@media print {
+  /* Hide sidebar/nav/buttons in print */
+  aside, nav, .sidebar, .sidenav, .menu, .nav-inner,
+  button, .btn, .no-print {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  /* Expand content */
+  main, #root, body, html {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+  }
+
+  .invoice-page {
+    max-width: 760px !important; /* keep centered like A4 */
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+
+  /* Hide therapist line for thermal receipts */
+  .therapist-line {
+    display: none !important;
+  }
+}/* ===== Thermal receipt (screen + print) ===== */
+.receipt.wrap {
+  width: 280px;               /* good for 58mm paper; use 340px for 80mm */
+  margin: 0 auto;
+  padding: 8px 6px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 12px;
+  color: #111;
+  background: #fff;
+}
+
+.receipt .r-center { text-align: center; }
+.receipt .r-strong { font-weight: 700; }
+.receipt .r-sep { margin: 6px 0; border-top: 1px dashed #999; }
+
+.receipt .r-row {
+  display: grid;
+  grid-template-columns: 1fr 28px 70px 80px; /* item | qty | price | total */
+  gap: 6px;
+  align-items: baseline;
+  padding: 2px 0;
+}
+.receipt .r-row.r-total { border-top: 1px solid #000; margin-top: 6px; padding-top: 6px; }
+.receipt .r-item { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.receipt .r-n { text-align: right; }
+.receipt .r-notes { white-space: pre-wrap; margin-top: 4px; }
+
+.receipt .r-actions { display: flex; gap: 8px; margin-top: 8px; }
+
+/* hide therapist on any print (already used elsewhere), and keep receipt full width */
+@media print {
+  .therapist-line { display: none !important; }
+  .receipt.wrap { width: 100% !important; max-width: 320px !important; margin: 0 auto !important; }
+}/* --- Customer report layout fixes --- */
+.report-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  align-items: start;
+}
+
+.report-card {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.report-title { color:#666; font-size:12px; margin:0 0 6px; }
+.report-value { font-weight:700; font-size:18px; word-break: break-word; }
+
+/* tables */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table th, .table td {
+  padding: 8px 6px;
+  border-bottom: 1px solid #f1f1f1;
+  text-align: left;
+}
+.table th.num, .table td.num { text-align: right; }
+
+/* Print polish for customer report */
+@media print {
+  h1 { font-size: 22px; margin: 0 0 8px; }
+  .filters, .no-print { display: none !important; }
+
+  .report-grid {
+    grid-template-columns: repeat(3, 1fr); /* keep summary in 3 neat columns on paper */
+    gap: 10px;
+  }
+
+  .table th, .table td { padding: 6px 5px; }
+  .page { max-width: 800px !important; margin: 0 auto !important; }
+}/* ===== Customer Report print/layout fix ===== */
+
+/* general table helpers */
+.table { width:100%; border-collapse:collapse; }
+.table th, .table td { padding:8px 6px; border-bottom:1px solid #f1f1f1; text-align:left; }
+.table th.num, .table td.num { text-align:right; }
+
+/* summary grid */
+.report-summary {
+  display:grid;
+  gap:12px;
+  grid-template-columns: repeat(auto-fit, minmax(160px,1fr));
+  align-items:start;
+}
+.summary-card {
+  border:1px solid #eee; border-radius:8px; padding:10px 12px;
+}
+.summary-title { color:#666; font-size:12px; margin:0 0 6px; }
+.summary-value { font-weight:700; font-size:18px; word-break:break-word; }
+
+/* show text-only mirrors in print (next to selects/inputs) */
+.print-only { display:none; }
+
+@media print {
+  /* hide side UI/filters/controls */
+  aside, nav, .filters, .no-print,
+  button, .btn, input, select, textarea {
+    display:none !important;
+  }
+
+  /* but allow explicit print mirrors to show */
+  .print-only { display:inline !important; }
+
+  /* tighten page width and typography */
+  .page { max-width:800px !important; margin:0 auto !important; }
+  h1 { font-size:22px; margin:0 0 8px; }
+
+  /* keep summary neat in 3 columns on paper */
+  .report-summary { grid-template-columns:repeat(3, 1fr); gap:10px; }
+  .table th, .table td { padding:6px 5px; }
+}/* --- CustomerReport print fixes --- */
+@media print {
+  /* fewer columns so cards are wider on paper */
+  .report-summary {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px !important;
+  }
+  /* keep values on one line, tighten padding */
+  .summary-card {
+    white-space: nowrap !important;
+    padding: 8px 10px !important;
+    background: #fff !important;
+  }
+  .summary-card .summary-title {
+    font-size: 11px !important;
+    color: #666 !important;
+  }
+  .summary-card .summary-value {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+  }
+
+  /* tables: readable on A4/thermal */
+  .table {
+    font-size: 12px !important;
+  }
+  .table th, .table td {
+    padding: 6px 8px !important;
+  }
+
+  /* keep wide columns from collapsing */
+  .table .num { text-align: right !important; }
+}/* ========= Invoice layout: screen defaults ========= */
+.invoice-page { 
+  max-width: 760px; 
+  margin: 0 auto; 
+  padding: 16px; 
+}
+.a4-only { display: none; }
+.thermal-only { display: none; }
+
+/* On screen, reflect the dropdown */
+.invoice-page.a4 .a4-only { display: block; }
+.invoice-page.thermal .thermal-only { display: block; }
+
+/* ========= Print rules ========= */
+@media print {
+  /* Hide UI/menus on print */
+  aside, nav, .no-print { display: none !important; }
+  html, body, #root, main { width: 100% !important; margin: 0 !important; padding: 0 !important; }
+
+  /* Remove any shadows/bounds that some themes add */
+  .invoice-page { box-shadow: none !important; }
+
+  /* ----- A4 mode ----- */
+  body.print-a4 .a4-only { display: block !important; }
+  body.print-a4 .thermal-only { display: none !important; }
+  body.print-a4 .invoice-page { 
+    max-width: 720px !important; 
+    margin: 0 auto !important; 
+    padding: 0 8mm !important; 
+    font-size: 14px;
+  }
+
+  /* ----- Thermal (receipt) mode ----- */
+  body.print-thermal .a4-only { display: none !important; }
+  body.print-thermal .thermal-only { display: block !important; }
+  body.print-thermal .invoice-page {
+    /* Set your paper width: 58mm or 80mm receipts */
+    width: 72mm !important;              /* change to 58mm if needed */
+    margin: 0 auto !important;
+    padding: 0 !important;
+    font-size: 12px;
+  }
+  body.print-thermal table { font-size: 12px; }
+  body.print-thermal table th,
+  body.print-thermal table td { padding: 6px 4px; }
+}/* ==== Invoice base ==== */
+.invoice-page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 16px;
+}
+.a4-only { display: none; }
+.thermal-only { display: none; }
+
+/* Mode toggles */
+.invoice-page.a4 .a4-only { display: block; }
+.invoice-page.a4 .thermal-only { display: none; }
+.invoice-page.thermal .thermal-only { display: block; }
+.invoice-page.thermal .a4-only { display: none; }
+
+/* ==== Print rules ==== */
+@media print {
+  /* hide sidebar/controls */
+  aside, nav, header .no-print, .no-print { display: none !important; }
+
+  html, body, #root, main {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* A4 layout */
+  .invoice-page.a4 {
+    max-width: 720px !important;
+    margin: 0 auto !important;
+    padding: 0 8mm !important;
+    font-size: 14px;
+  }
+
+  /* Thermal layout (receipt width) */
+  .invoice-page.thermal {
+    width: 72mm !important; /* إذا الطابعة 58mm غيّر الرقم لـ58 */
+    margin: 0 auto !important;
+    padding: 0 !important;
+    font-size: 12px;
+  }
+  .invoice-page.thermal table { font-size: 12px; }
+  .invoice-page.thermal th,
+  .invoice-page.thermal td { padding: 6px 4px; }
+}fetch('http://localhost:5000/api/auth/login',{
+  method:'POST',
+  headers:{'Content-Type':'application/json'},
+  body: JSON.stringify({ email:'superadmin@example.com', password:'super1234' })
+}).then(r=>r.json()).then(d=>{
+  localStorage.setItem('token', d.token);
+  localStorage.setItem('role', d.role);
+  alert('Logged in'); 
+  location.reload();
+}).catch(console.error);

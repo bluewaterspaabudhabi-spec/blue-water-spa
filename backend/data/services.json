@@ -1,0 +1,20 @@
+[
+  {
+    "id": 2,
+    "name": "boy",
+    "price": 400,
+    "duration": 0
+  },
+  {
+    "id": 3,
+    "name": "msag",
+    "price": 500,
+    "duration": 0
+  },
+  {
+    "id": 4,
+    "name": "hir",
+    "price": 100,
+    "duration": 0
+  }
+]

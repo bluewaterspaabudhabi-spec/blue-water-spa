@@ -1,0 +1,136 @@
+[
+  {
+    "id": 1,
+    "date": "2025-08-27",
+    "category": "General",
+    "note": "",
+    "amount": 0
+  },
+  {
+    "id": 2,
+    "date": "2025-08-27",
+    "category": "General",
+    "note": "",
+    "amount": 500
+  },
+  {
+    "id": 3,
+    "date": "2025-08-30T00:00:00.000Z",
+    "vendor": "Water Co",
+    "description": "Monthly water",
+    "method": "Cash",
+    "invoice": "INV-1001",
+    "amount": 150.75,
+    "createdAt": "2025-09-01T08:53:12.069Z",
+    "updatedAt": "2025-09-01T08:53:12.069Z"
+  },
+  {
+    "id": 4,
+    "date": "2025-08-30T00:00:00.000Z",
+    "vendor": "Electric",
+    "description": "Power bill",
+    "method": "Card",
+    "invoice": "INV-1002",
+    "amount": 250,
+    "createdAt": "2025-09-01T08:53:12.069Z",
+    "updatedAt": "2025-09-01T08:53:12.069Z"
+  },
+  {
+    "id": 5,
+    "date": "2025-08-29T00:00:00.000Z",
+    "vendor": "Supplier A",
+    "description": "Massage oil",
+    "method": "Transfer",
+    "invoice": "INV-1003",
+    "amount": 1200,
+    "createdAt": "2025-09-01T08:53:12.069Z",
+    "updatedAt": "2025-09-01T08:53:12.069Z"
+  },
+  {
+    "id": 6,
+    "amount": 246597231,
+    "createdAt": "2025-09-01T09:05:10.146Z",
+    "updatedAt": "2025-09-01T09:05:10.146Z"
+  },
+  {
+    "id": 7,
+    "amount": 242072707,
+    "createdAt": "2025-09-01T09:05:10.146Z",
+    "updatedAt": "2025-09-01T09:05:10.146Z"
+  },
+  {
+    "id": 8,
+    "amount": 84632430,
+    "createdAt": "2025-09-01T09:05:10.146Z",
+    "updatedAt": "2025-09-01T09:05:10.146Z"
+  },
+  {
+    "id": 9,
+    "amount": 84632430,
+    "createdAt": "2025-09-01T09:05:10.146Z",
+    "updatedAt": "2025-09-01T09:05:10.146Z"
+  },
+  {
+    "id": 10,
+    "amount": 244723501,
+    "createdAt": "2025-09-01T09:05:10.146Z",
+    "updatedAt": "2025-09-01T09:05:10.146Z"
+  },
+  {
+    "id": 11,
+    "amount": 74277632,
+    "createdAt": "2025-09-01T09:05:10.146Z",
+    "updatedAt": "2025-09-01T09:05:10.146Z"
+  },
+  {
+    "id": 12,
+    "amount": 84632430,
+    "createdAt": "2025-09-01T09:05:10.146Z",
+    "updatedAt": "2025-09-01T09:05:10.146Z"
+  },
+  {
+    "id": 13,
+    "amount": 74277632,
+    "createdAt": "2025-09-01T09:05:10.146Z",
+    "updatedAt": "2025-09-01T09:05:10.146Z"
+  },
+  {
+    "id": 14,
+    "amount": 74277632,
+    "createdAt": "2025-09-01T09:05:10.146Z",
+    "updatedAt": "2025-09-01T09:05:10.146Z"
+  },
+  {
+    "id": 15,
+    "date": "2025-08-30T00:00:00.000Z",
+    "vendor": "Water Co",
+    "description": "Monthly water",
+    "method": "Cash",
+    "invoice": "INV-1001",
+    "amount": 150.75,
+    "createdAt": "2025-09-01T10:11:11.842Z",
+    "updatedAt": "2025-09-01T10:11:11.842Z"
+  },
+  {
+    "id": 16,
+    "date": "2025-08-30T00:00:00.000Z",
+    "vendor": "Electric",
+    "description": "Power bill",
+    "method": "Card",
+    "invoice": "INV-1002",
+    "amount": 250,
+    "createdAt": "2025-09-01T10:11:11.843Z",
+    "updatedAt": "2025-09-01T10:11:11.843Z"
+  },
+  {
+    "id": 17,
+    "date": "2025-08-29T00:00:00.000Z",
+    "vendor": "Supplier A",
+    "description": "Massage oil",
+    "method": "Transfer",
+    "invoice": "INV-1003",
+    "amount": 1200,
+    "createdAt": "2025-09-01T10:11:11.843Z",
+    "updatedAt": "2025-09-01T10:11:11.843Z"
+  }
+]

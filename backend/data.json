@@ -1,0 +1,44 @@
+{
+  "settings": {
+    "spaName": "Blue Water Spa",
+    "phone": "0900-000000",
+    "email": "info@domain.com",
+    "address": "City, Country",
+    "currency": "USD",
+    "taxRate": 0,
+    "paymentMethods": "Cash, Card, Transfer",
+    "logo": ""
+  },
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "1234",
+      "role": "manager"
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "tom",
+      "phone": "123",
+      "notes": ""
+    },
+    {
+      "id": 2,
+      "name": "jon",
+      "phone": "123",
+      "notes": ""
+    },
+    {
+      "id": 3,
+      "name": "jak",
+      "phone": "123",
+      "notes": ""
+    }
+  ],
+  "invoices": [],
+  "expenses": [],
+  "services": [],
+  "sessions": []
+}
