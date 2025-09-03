@@ -1,7 +1,7 @@
 // frontend/src/pages/Customers.jsx
 import { useEffect, useState, useMemo, useRef } from "react";
 
-const API = "http://localhost:5000/api/customers";
+const API = "http://apiFetch(/api/customers";
 
 export default function Customers() {
   const [rows, setRows] = useState([]);

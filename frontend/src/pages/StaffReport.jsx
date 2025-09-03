@@ -13,7 +13,7 @@ import { useEffect, useMemo, useState } from "react";
  * Uses: /api/invoices, /api/staff, /api/services
  */
 
-const API = "http://localhost:5000/api";
+const API = "http://apiFetch(/api";
 
 export default function StaffReport() {
   // filters

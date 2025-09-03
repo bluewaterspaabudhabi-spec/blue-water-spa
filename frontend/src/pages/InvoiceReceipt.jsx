@@ -10,7 +10,7 @@ export default function InvoiceReceipt() {
   useEffect(() => {
     setLoading(true);
     setError("");
-    fetch(`http://localhost:5000/api/invoices/${id}`)
+    fetch(`http://apiFetch(/api/invoices/${id}`)
       .then(r => (r.ok ? r.json() : Promise.reject(`HTTP ${r.status}`)))
       .then(setInvoice)
       .catch(e => setError(String(e)))

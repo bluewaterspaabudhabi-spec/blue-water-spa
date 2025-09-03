@@ -1,7 +1,7 @@
 // frontend/src/pages/Staff.jsx
 import { useEffect, useState } from "react";
 
-const API = "http://localhost:5000/api/staff";
+const API = "http://apiFetch(/api/staff";
 
 export default function Staff() {
   const [rows, setRows] = useState([]);

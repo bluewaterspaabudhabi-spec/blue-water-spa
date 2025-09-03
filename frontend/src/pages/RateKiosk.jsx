@@ -1,7 +1,7 @@
 // frontend/src/pages/RateKiosk.jsx
 import { useMemo, useState } from "react";
 
-const API = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+const API = import.meta.env.VITE_API_URL || "http://apiFetch(/api";
 
 export default function RateKiosk() {
   // read query params (session/customer/etc.)

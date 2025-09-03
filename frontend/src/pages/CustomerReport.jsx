@@ -40,7 +40,7 @@ export default function CustomerReport() {
 
   // preload some customers once
   useEffect(() => {
-    fetch("http://localhost:5000/api/customers?limit=20")
+    fetch("http://apiFetch(/api/customers?limit=20")
       .then((r) => (r.ok ? r.json() : []))
       .then((rows) => (Array.isArray(rows) ? rows : []))
       .then((rows) => {
@@ -61,8 +61,8 @@ export default function CustomerReport() {
       setCustLoading(true);
       try {
         const url = q
-          ? `http://localhost:5000/api/customers?q=${encodeURIComponent(q)}&limit=10`
-          : `http://localhost:5000/api/customers?limit=10`;
+          ? `http://apiFetch(/api/customers?q=${encodeURIComponent(q)}&limit=10`
+          : `http://apiFetch(/api/customers?limit=10`;
         const r = await fetch(url);
         const data = (await r.json()) || [];
         if (!stop) setCustSuggestions(Array.isArray(data) ? data : []);
@@ -97,7 +97,7 @@ export default function CustomerReport() {
     if (from) qs.set("from", from);
     if (to) qs.set("to", to);
 
-    fetch(`http://localhost:5000/api/invoices?${qs.toString()}`)
+    fetch(`http://apiFetch(/api/invoices?${qs.toString()}`)
       .then((r) => (r.ok ? r.json() : Promise.reject(r.statusText)))
       .then((rows) => (Array.isArray(rows) ? rows : []))
       .then(setInvoices)

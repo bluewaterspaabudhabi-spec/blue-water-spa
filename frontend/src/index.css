@@ -329,7 +329,7 @@ th, td {
   .invoice-page.thermal table { font-size: 12px; }
   .invoice-page.thermal th,
   .invoice-page.thermal td { padding: 6px 4px; }
-}fetch('http://localhost:5000/api/auth/login',{
+}fetch('http://apiFetch(/api/auth/login',{
   method:'POST',
   headers:{'Content-Type':'application/json'},
   body: JSON.stringify({ email:'superadmin@example.com', password:'super1234' })

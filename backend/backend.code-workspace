@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../frontend/node_modules"
+		},
+		{
+			"path": "../frontend/public"
+		},
+		{
+			"path": "../frontend/src"
+		}
+	]
+}

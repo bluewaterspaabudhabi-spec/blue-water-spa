@@ -13,7 +13,7 @@ export default function InvoiceView() {
     (async () => {
       try {
         setError("");
-        const res = await fetch(`http://localhost:5000/api/invoices/${id}`);
+        const res = await fetch(`http://apiFetch(/api/invoices/${id}`);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
         if (!ignore) setInv(data);

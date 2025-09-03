@@ -1,7 +1,7 @@
 // frontend/src/pages/FeedbackForm.jsx
 import { useEffect, useMemo, useState } from "react";
 
-const API = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+const API = import.meta.env.VITE_API_URL || "http://apiFetch(/api";
 
 export default function FeedbackForm() {
   // query params: ?appointmentId=&customerId=&therapistId=&serviceId=

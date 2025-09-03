@@ -37,11 +37,11 @@ export default function Reports() {
         setError("");
         const req = (url) => fetch(url).then((r) => (r.ok ? r.json() : Promise.reject(new Error(`${url} ${r.status}`))));
         const [inv, srv, stf, cus, exp] = await Promise.allSettled([
-          req("http://localhost:5000/api/invoices"),
-          req("http://localhost:5000/api/services"),
-          req("http://localhost:5000/api/staff"),
-          req("http://localhost:5000/api/customers"),
-          req("http://localhost:5000/api/expenses"),
+          req("http://apiFetch(/api/invoices"),
+          req("http://apiFetch(/api/services"),
+          req("http://apiFetch(/api/staff"),
+          req("http://apiFetch(/api/customers"),
+          req("http://apiFetch(/api/expenses"),
         ]);
 
         if (inv.status !== "fulfilled") throw inv.reason;

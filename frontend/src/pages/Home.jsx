@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const API = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API = import.meta.env.VITE_API_URL || "http://apiFetch(";
 
 export default function Home() {
   const [sessions, setSessions] = useState([]);
