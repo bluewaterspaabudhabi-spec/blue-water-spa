@@ -1,6 +1,7 @@
+// frontend/src/pages/Settings.jsx
 import React, { useEffect, useState } from "react";
-
 import apiFetch from "../utils/apiFetch";
+
 export default function Settings() {
   const [settings, setSettings] = useState({
     businessName: "",
@@ -21,12 +22,12 @@ export default function Settings() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  // 🔹 تحميل الإعدادات عند فتح الصفحة
   useEffect(() => {
     async function loadSettings() {
       try {
-        const res = await apiapiFetch('/settings', { method: "GET" });
-        if (!res.ok) throw new Error("Failed to load settings");
+        setError("");
+        const res = await apiFetch("/settings", { method: "GET" });
+        if (!res.ok) throw new Error(`Failed to load settings (${res.status})`);
         const data = await res.json();
         setSettings((prev) => ({ ...prev, ...data }));
       } catch (err) {
@@ -37,16 +38,15 @@ export default function Settings() {
     loadSettings();
   }, []);
 
-  // 🔹 حفظ الإعدادات
   async function handleSave() {
-    setLoading(true);
-    setError("");
     try {
-      const res = await apiapiFetch('/settings', {
+      setLoading(true);
+      setError("");
+      const res = await apiFetch("/settings", {
         method: "PUT",
         body: JSON.stringify(settings),
       });
-      if (!res.ok) throw new Error("Failed to save settings");
+      if (!res.ok) throw new Error(`Failed to save settings (${res.status})`);
       alert("✅ Settings saved successfully!");
     } catch (err) {
       console.error(err);
@@ -56,18 +56,17 @@ export default function Settings() {
     }
   }
 
-  // 🔹 تحديث الحقول
   function handleChange(e) {
     const { name, value } = e.target;
     setSettings((prev) => ({ ...prev, [name]: value }));
   }
 
   return (
-    <div className="settings-page">
+    <div className="settings-page" style={{ maxWidth: 900, margin: "0 auto" }}>
       <h2>Settings</h2>
-      {error && <p style={{ color: "red" }}>{error}</p>}
+      {error && <p style={{ color: "red", marginBottom: 12 }}>{error}</p>}
 
-      <div className="form">
+      <div className="form" style={{ display: "grid", gap: 10 }}>
         <input
           type="text"
           name="businessName"
@@ -132,6 +131,7 @@ export default function Settings() {
           onChange={handleChange}
         />
 
+        <label style={{ marginTop: 10, fontWeight: 600 }}>Default currency</label>
         <select
           name="defaultCurrency"
           value={settings.defaultCurrency}
@@ -142,6 +142,7 @@ export default function Settings() {
           <option value="SAR">SAR</option>
         </select>
 
+        <label style={{ marginTop: 10, fontWeight: 600 }}>Default print mode</label>
         <select
           name="defaultPrintMode"
           value={settings.defaultPrintMode}
@@ -158,6 +159,8 @@ export default function Settings() {
           placeholder="Default Tax Rate %"
           value={settings.defaultTaxRate}
           onChange={handleChange}
+          min="0"
+          step="0.01"
         />
 
         <textarea
@@ -165,11 +168,21 @@ export default function Settings() {
           placeholder="Invoice footer"
           value={settings.invoiceFooter}
           onChange={handleChange}
+          rows={4}
         />
 
-        <button onClick={handleSave} disabled={loading}>
-          {loading ? "Saving..." : "Save"}
-        </button>
+        <div style={{ display: "flex", gap: 10, marginTop: 10 }}>
+          <button onClick={handleSave} disabled={loading}>
+            {loading ? "Saving..." : "Save"}
+          </button>
+          <button
+            type="button"
+            onClick={() => window.location.reload()}
+            style={{ background: "#eee" }}
+          >
+            Reload
+          </button>
+        </div>
       </div>
     </div>
   );
