@@ -40,7 +40,7 @@ export default function CustomerReport() {
 
   // preload some customers once
   useEffect(() => {
-    fetch("http://apiFetch(/api/customers?limit=20")
+    apiFetch('/customers?limit=20')
       .then((r) => (r.ok ? r.json() : []))
       .then((rows) => (Array.isArray(rows) ? rows : []))
       .then((rows) => {

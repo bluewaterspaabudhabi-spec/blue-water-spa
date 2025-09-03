@@ -5,7 +5,7 @@ export default function Brand() {
   const [s, setS] = useState(null);
 
   useEffect(() => {
-    fetch("http://apiFetch(/api/settings")
+    apiFetch('/settings')
       .then(r => (r.ok ? r.json() : {}))
       .then(setS)
       .catch(() => setS({}));

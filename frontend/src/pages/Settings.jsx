@@ -25,7 +25,7 @@ export default function Settings() {
   useEffect(() => {
     async function loadSettings() {
       try {
-        const res = await apiFetch("/api/settings", { method: "GET" });
+        const res = await apiapiFetch('/settings', { method: "GET" });
         if (!res.ok) throw new Error("Failed to load settings");
         const data = await res.json();
         setSettings((prev) => ({ ...prev, ...data }));
@@ -42,7 +42,7 @@ export default function Settings() {
     setLoading(true);
     setError("");
     try {
-      const res = await apiFetch("/api/settings", {
+      const res = await apiapiFetch('/settings', {
         method: "PUT",
         body: JSON.stringify(settings),
       });
