@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import apiFetch from "../../utils/apiFetch";
 
 export default function Settings() {
-
   const [settings, setSettings] = useState({
     businessName: "",
     phone: "",
@@ -33,16 +32,16 @@ export default function Settings() {
         setSettings((prev) => ({ ...prev, ...data }));
       } catch (err) {
         console.error(err);
-        setError("Error: HTTP 404 settings");
+        setError("Error: failed to load settings");
       }
     }
     loadSettings();
   }, []);
 
   async function handleSave() {
+    setLoading(true);
+    setError("");
     try {
-      setLoading(true);
-      setError("");
       const res = await apiFetch("/settings", {
         method: "PUT",
         body: JSON.stringify(settings),
@@ -51,7 +50,7 @@ export default function Settings() {
       alert("✅ Settings saved successfully!");
     } catch (err) {
       console.error(err);
-      setError("Error: Failed to save settings");
+      setError("Error: failed to save settings");
     } finally {
       setLoading(false);
     }
@@ -63,11 +62,11 @@ export default function Settings() {
   }
 
   return (
-    <div className="settings-page" style={{ maxWidth: 900, margin: "0 auto" }}>
+    <div className="settings-page">
       <h2>Settings</h2>
-      {error && <p style={{ color: "red", marginBottom: 12 }}>{error}</p>}
+      {error && <p style={{ color: "red" }}>{error}</p>}
 
-      <div className="form" style={{ display: "grid", gap: 10 }}>
+      <div className="form">
         <input
           type="text"
           name="businessName"
@@ -132,7 +131,6 @@ export default function Settings() {
           onChange={handleChange}
         />
 
-        <label style={{ marginTop: 10, fontWeight: 600 }}>Default currency</label>
         <select
           name="defaultCurrency"
           value={settings.defaultCurrency}
@@ -143,7 +141,6 @@ export default function Settings() {
           <option value="SAR">SAR</option>
         </select>
 
-        <label style={{ marginTop: 10, fontWeight: 600 }}>Default print mode</label>
         <select
           name="defaultPrintMode"
           value={settings.defaultPrintMode}
@@ -160,8 +157,6 @@ export default function Settings() {
           placeholder="Default Tax Rate %"
           value={settings.defaultTaxRate}
           onChange={handleChange}
-          min="0"
-          step="0.01"
         />
 
         <textarea
@@ -169,21 +164,11 @@ export default function Settings() {
           placeholder="Invoice footer"
           value={settings.invoiceFooter}
           onChange={handleChange}
-          rows={4}
         />
 
-        <div style={{ display: "flex", gap: 10, marginTop: 10 }}>
-          <button onClick={handleSave} disabled={loading}>
-            {loading ? "Saving..." : "Save"}
-          </button>
-          <button
-            type="button"
-            onClick={() => window.location.reload()}
-            style={{ background: "#eee" }}
-          >
-            Reload
-          </button>
-        </div>
+        <button onClick={handleSave} disabled={loading}>
+          {loading ? "Saving..." : "Save"}
+        </button>
       </div>
     </div>
   );
