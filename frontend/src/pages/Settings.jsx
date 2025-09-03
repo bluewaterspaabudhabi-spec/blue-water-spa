@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
-import apiFetch from "../../utils/apiFetch";
 
-import apiFetch from "../utils/PapiFetch";
-
+import apiFetch from "../utils/apiFetch";
 export default function Settings() {
   const [settings, setSettings] = useState({
     businessName: "",
