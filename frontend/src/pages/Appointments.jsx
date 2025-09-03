@@ -1,4 +1,5 @@
 // frontend/src/pages/Appointments.jsx
+import apiFetch from "../../utils/apiFetch";
 import { useEffect, useMemo, useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 

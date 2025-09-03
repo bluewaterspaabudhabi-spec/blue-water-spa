@@ -1,3 +1,5 @@
+import apiFetch from "../../utils/apiFetch";
+
 import { useEffect, useMemo, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 

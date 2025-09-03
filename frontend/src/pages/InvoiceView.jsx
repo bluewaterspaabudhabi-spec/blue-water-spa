@@ -1,4 +1,6 @@
 // frontend/src/pages/InvoiceView.jsx
+import apiFetch from "../../utils/apiFetch";
+
 import React from "react";
 import { useParams, useSearchParams } from "react-router-dom";
 

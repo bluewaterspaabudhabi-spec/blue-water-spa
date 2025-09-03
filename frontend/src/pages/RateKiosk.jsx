@@ -1,4 +1,6 @@
 // frontend/src/pages/RateKiosk.jsx
+import apiFetch from "../../utils/apiFetch";
+
 import { useMemo, useState } from "react";
 
 const API = import.meta.env.VITE_API_URL || "http://apiFetch(/api";

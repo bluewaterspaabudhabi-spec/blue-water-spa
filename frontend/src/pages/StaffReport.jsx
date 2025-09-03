@@ -1,4 +1,6 @@
 // frontend/src/pages/StaffReport.jsx
+import apiFetch from "../../utils/apiFetch";
+
 import { useEffect, useMemo, useState } from "react";
 
 /**

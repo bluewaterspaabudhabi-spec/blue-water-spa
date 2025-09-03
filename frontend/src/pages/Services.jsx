@@ -1,4 +1,6 @@
 // frontend/src/pages/Services.jsx
+import apiFetch from "../../utils/apiFetch";
+
 import { useEffect, useState } from "react";
 
 const API = import.meta.env.VITE_API_URL || "http://apiFetch(/api";

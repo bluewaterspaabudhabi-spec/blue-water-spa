@@ -1,4 +1,6 @@
 // frontend/src/pages/Expenses.jsx
+import apiFetch from "../../utils/apiFetch";
+
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Papa from "papaparse";
