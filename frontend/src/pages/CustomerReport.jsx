@@ -1,5 +1,5 @@
 // frontend/src/pages/CustomerReport.jsx
-import apiFetch from "../../utils/apiFetch";
+import apiFetch from "../utils/apiFetch";
 import { useEffect, useMemo, useState, useRef } from "react";
 
 /**
