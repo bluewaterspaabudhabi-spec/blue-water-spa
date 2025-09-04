@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import apiFetch from "..../utils/apiFetch.js.js.js";
+import apiFetch from "../utils/apiFetch";
 
 import { useNavigate, useSearchParams, Link } from "react-router-dom";
 

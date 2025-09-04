@@ -1,5 +1,5 @@
 // frontend/src/pages/Staff.jsx
-import apiFetch from "..../utils/apiFetch.js.js.js";
+import apiFetch from "../utils/apiFetch";
 import { useEffect, useState } from "react";
 
 const API = "http://apiFetch(/api/staff";

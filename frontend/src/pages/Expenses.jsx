@@ -1,5 +1,5 @@
 // frontend/src/pages/Expenses.jsx
-import apiFetch from "..../utils/apiFetch.js.js.js";
+import apiFetch from "../utils/apiFetch";
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";

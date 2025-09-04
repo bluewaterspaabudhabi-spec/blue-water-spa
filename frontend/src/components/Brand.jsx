@@ -1,6 +1,6 @@
 // frontend/src/components/Brand.jsx
 import { useEffect, useState } from "react";
-
+import apiFetch from "../utils/apiFetch";
 export default function Brand() {
   const [s, setS] = useState(null);
 

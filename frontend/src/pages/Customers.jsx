@@ -1,5 +1,5 @@
 // frontend/src/pages/Customers.jsx
-import apiFetch from "..../utils/apiFetch.js.js.js";
+import apiFetch from "../utils/apiFetch";
 import { useEffect, useState, useMemo, useRef } from "react";
 
 const API = "http://apiFetch(/api/customers";
