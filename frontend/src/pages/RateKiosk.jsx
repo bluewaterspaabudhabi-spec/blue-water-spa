@@ -1,5 +1,5 @@
 // frontend/src/pages/RateKiosk.jsx
-import apiFetch from "../utils/apiFetch";
+import apiFetch from '../utils/apiFetch';
 
 import { useMemo, useState } from "react";
 

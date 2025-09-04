@@ -1,5 +1,5 @@
 
-import apiFetch from "../utils/apiFetch";
+import apiFetch from '../utils/apiFetch';
 import { useSearchParams } from "react-router-dom";
 const API = import.meta.env.VITE_API_URL || "http://apiFetch(/api";
 
