@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import apiFetch from '../utils/apiFetch';
+import apiFetch from "..../utils/apiFetch.js.js.js";
 
 const API = import.meta.env.VITE_API_URL || "http://apiFetch(";
 

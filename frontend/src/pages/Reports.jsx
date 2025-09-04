@@ -1,5 +1,5 @@
 // frontend/src/pages/Reports.jsx
-import apiFetch from '../utils/apiFetch';
+import apiFetch from "..../utils/apiFetch.js.js.js";
 
 import { useEffect, useMemo, useState } from "react";
 

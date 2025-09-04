@@ -1,6 +1,6 @@
 // frontend/src/pages/Settings.jsx
 import React, { useEffect, useState } from "react";
-import apiFetch from '../utils/apiFetch';
+import apiFetch from "..../utils/apiFetch.js.js.js";
 
 export default function Settings() {
   const [settings, setSettings] = useState({
